@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ldq.rolelist.layout.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/choose"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/greeting"
+                android:textSize="18sp"
+                android:padding="0dip"
+                android:layout_margin="5dip"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dip">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_yukino"
+                    android:textSize="15sp"
+                    android:gravity="left|center_vertical"
+                    android:padding="0dip"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_yui"
+                    android:textSize="15sp"
+                    android:gravity="left|center_vertical"
+                    android:padding="0dip"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_iroha"
+                    android:textSize="15sp"
+                    android:gravity="left|center_vertical"
+                    android:padding="0dip"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_confirm"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_margin="5dip"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:background="@drawable/button_background"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ldq.rolelist">
+
+    <permission
+        android:name="ldq.rolelist.receiver.permission"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="ldq.rolelist.receiver.permission" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.TestActivity"
+            android:launchMode="singleTask"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name=".activity.RoleListActivity"
+            android:launchMode="singleTask"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name=".activity.RoleActivity"
+            android:launchMode="singleTask"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name=".activity.BaseActivity"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.NotifyService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name=".service.SoundService"
+            android:exported="true"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".receiver.RoleKilledReceiver"
+            android:permission="ldq.rolelist.receiver.permission"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter android:priority="100">
+                <action android:name="ldq.rolelist.receiver.ROLE_KILLED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.NetStateReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

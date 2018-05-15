@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RoleList</string>
+    <string name="greeting">请选择一位做老婆:</string>
+    <string name="title">角色列表</string>
+    <string name="button_back">返回</string>
+    <string name="button_exit">退出</string>
+    <string name="button_submit">提交</string>
+    <string name="button_confirm">确定</string>
+    <string name="option_yukino">雪之下雪乃</string>
+    <string name="option_yui">由比滨结衣</string>
+    <string name="option_iroha">一色彩羽</string>
+    <string name="test">请回答老婆的生日:</string>
+    <string name="test_month">月</string>
+    <string name="test_day">日</string>
+    <string name="tag_search">标签搜索:</string>
+    <string name="hint_search">例:大老师</string>
+    <string name="info_name">姓名</string>
+    <string name="info_romaji">罗马音</string>
+    <string name="info_sex">性别</string>
+    <string name="info_blood">血型</string>
+    <string name="info_birthday">生日</string>
+    <string name="info_note">备注</string>
+
+</resources>
